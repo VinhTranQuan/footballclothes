@@ -1,7 +1,7 @@
 {
-  "name": "footballshop",
+  "name": "footballclothes",
   "version": "1.0.0",
-  "description": "# Lessons",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VinhTranQuan/ClothesShop.git"
+    "url": "git+https://github.com/VinhTranQuan/footballclothes.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VinhTranQuan/ClothesShop/issues"
+    "url": "https://github.com/VinhTranQuan/footballclothes/issues"
   },
-  "homepage": "https://github.com/VinhTranQuan/ClothesShop#readme"
+  "homepage": "https://github.com/VinhTranQuan/footballclothes#readme"
 }
