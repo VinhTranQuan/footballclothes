@@ -22,7 +22,7 @@ productRouter.post(
       price: 0,
       category: 'sample category',
       brand: 'sample brand',
-      countInStock: 0,
+      countInstock: 0,
       rating: 0,
       numReviews: 0,
       description: 'sample description',
@@ -174,6 +174,22 @@ productRouter.get('/:slug', async (req, res) => {
     res.status(404).send({ message: 'Product not found' });
   }
 });
+
+productRouter.delete(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const product = await Product.findById(req.params.id);
+    if (product) {
+      await product.remove();
+      res.send({ message: 'Product Deleted' });
+    } else {
+      res.status(404).send({ message: 'Product Not Found' });
+    }
+  })
+);
+
 productRouter.get('/id/:id', async (req, res) => {
   const product = await Product.findById(req.params.id);
   if (product) {
