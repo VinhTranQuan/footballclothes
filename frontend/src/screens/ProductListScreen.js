@@ -161,7 +161,7 @@ export default function ProductListScreen() {
                 <th>ID</th>
                 <th>NAME</th>
                 <th>PRICE</th>
-                <th>CATEGORY</th>
+                <th>TEAM NAME</th>
                 <th>BRAND</th>
                 <th>ACTIONS</th>
               </tr>

@@ -228,7 +228,7 @@ export default function ProductEditScreen() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="category">
-            <Form.Label>Category</Form.Label>
+            <Form.Label>Team Name</Form.Label>
             <Form.Control
               value={category}
               onChange={(e) => setCategory(e.target.value)}

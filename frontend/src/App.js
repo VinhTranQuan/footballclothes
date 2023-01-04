@@ -34,6 +34,13 @@ import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
+import {
+  MDBFooter,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+} from 'mdb-react-ui-kit';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -80,7 +87,7 @@ function App() {
                 <i className="fas fa-bars"></i>
               </Button>
               <LinkContainer to="/">
-                <Navbar.Brand>Triple-V</Navbar.Brand>
+                <Navbar.Brand>TaraShop</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="baisc-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -146,7 +153,7 @@ function App() {
         >
           <Nav className="flex-column text-white w-100 p-2">
             <Nav.Item>
-              <strong>Categories</strong>
+              <strong>Team Name</strong>
             </Nav.Item>
             {categories.map((category) => (
               <Nav.Item key={category}>
@@ -256,9 +263,111 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
-          <div className="text-center">All rights reserved</div>
-        </footer>
+        <MDBFooter
+          bgColor="black"
+          className="text-center text-lg-start text-muted"
+        >
+          <section className="">
+            <MDBContainer className="text-center text-md-start mt-5">
+              <MDBRow className="mt-3">
+                <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
+                  <h6 className="text-uppercase fw-bold mb-4">
+                    <MDBIcon color="white" icon="gem" className="me-3" />
+                    TaraShop
+                  </h6>
+                  <p>
+                    TaraShop is an electronic sales website specializing in
+                    selling all kinds of football clothes of famous teams in the
+                    world
+                  </p>
+                </MDBCol>
+
+                <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
+                  <h6 className="text-uppercase fw-bold mb-4">
+                    UserFull Links
+                  </h6>
+                  <p>
+                    <a href="/" className="text-reset">
+                      Home
+                    </a>
+                  </p>
+                  <p>
+                    <a href="/cart" className="text-reset">
+                      Cart
+                    </a>
+                  </p>
+                  <p>
+                    <a href="/profile" className="text-reset">
+                      User Profile
+                    </a>
+                  </p>
+                  <p>
+                    <a href="/orderhistory" className="text-reset">
+                      Order history
+                    </a>
+                  </p>
+                </MDBCol>
+
+                <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
+                  <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+                  <p>
+                    <MDBIcon color="secondary" icon="home" className="me-2" />
+                    So Tai, Thanh Phu, Cai Nuoc, Ca Mau
+                  </p>
+                  <p>
+                    <MDBIcon
+                      color="secondary"
+                      icon="envelope"
+                      className="me-3"
+                    />
+                    tranquanvinh001@gmail.com
+                  </p>
+
+                  <p>
+                    <MDBIcon color="secondary" icon="phone" className="me-3" />{' '}
+                    + 84 234 567 88
+                  </p>
+                  <p>
+                    <a
+                      href="https://www.facebook.com/XiaoJihun/"
+                      className="text-reset "
+                    >
+                      <MDBIcon
+                        color="secondary"
+                        fab
+                        icon="facebook-f"
+                        className="me-3"
+                      />
+                      Facebook
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="https://www.instagram.com/quan.vinh.71697/"
+                      className="text-reset "
+                    >
+                      <MDBIcon
+                        color="secondary"
+                        fab
+                        icon="instagram"
+                        className="me-3"
+                      />
+                      Instagram
+                    </a>
+                  </p>
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
+          </section>
+
+          <div
+            className="text-center p-4"
+            style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
+          >
+            © 2021 Copyright:
+            <a className="text-reset fw-bold">TaraShop</a>
+          </div>
+        </MDBFooter>
       </div>
     </BrowserRouter>
   );
