@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/VinhTranQuan/footballclothes/issues"
   },
-  "homepage": "https://github.com/VinhTranQuan/footballclothes#readme"
+  "homepage": "https://github.com/VinhTranQuan/footballclothes#readme",
+  "dependencies": {
+    "firebase": "^9.17.1"
+  }
 }
