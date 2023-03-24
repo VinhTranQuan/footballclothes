@@ -47,6 +47,7 @@ function Product(props) {
           <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
         )}
       </Card.Body>
+      z
     </Card>
   );
 }
